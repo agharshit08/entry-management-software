@@ -24,11 +24,7 @@ app.use('/visitors', visitors);
 // Use the Host Route
 app.use('/host', host);
 
-const port = process.env.PORT || 5000;
 
-app.listen(port, () => {
-    console.log(`Server running on ${port}`);
-});
 
 // Connecting to the database.
 mongoose
@@ -37,8 +33,7 @@ mongoose
     useUnifiedTopology: true
   })
   .then(result => {
-    console.log('Connected to Database');
-    app.listen(3000);
+    app.listen(process.env.PORT || 5000);
   })
   .catch(err => {
     console.log('Not connected');

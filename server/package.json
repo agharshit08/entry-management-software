@@ -4,7 +4,11 @@
   "description": "Entry Management Software",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js",
+    "start-server": "node server.js"
+  },
+  "engines": {
+    "node": "10.16.0"
   },
   "author": "",
   "license": "MIT",
