@@ -17,10 +17,10 @@ const VisitorSchema = new Schema({
     },
     checkInTime : {
         type: Date,
-        default: Date.now
+        default: new Date()
     },
     checkOutTime : {
-        type: Date,
+        type: String,
         required : true
     }
 });
