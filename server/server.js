@@ -33,7 +33,8 @@ app.listen(port, () => {
 // Connecting to the database.
 mongoose
   .connect(MONGODB_URI, {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true
   })
   .then(result => {
     console.log('Connected to Database');
