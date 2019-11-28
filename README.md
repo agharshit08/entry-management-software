@@ -38,3 +38,9 @@ Building the Front-End.
 7) An email is sent to Host with visitor details by Back-End.
 8) An email is sent to visitor with details of visit after the checkout.
 9) Deployed on Firebase to serve the content.
+
+
+If Link Doesn't work follow these steps to run the project
+
+1) Clone the project.
+2) Go to the client folder and open "index.html".
