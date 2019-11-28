@@ -14,6 +14,13 @@ const MONGODB_URI = `mongodb+srv://harshit:harshit1@@cluster0-nikcw.mongodb.net/
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+// Disabling CORS
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+
+
 // Sample Route.
 app.get('/', (req, res) => {
     res.send(`Hello`);
@@ -33,6 +40,7 @@ mongoose
     useUnifiedTopology: true
   })
   .then(result => {
+    console.log('Connected');
     app.listen(process.env.PORT || 5000);
   })
   .catch(err => {
